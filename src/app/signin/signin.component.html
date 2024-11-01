@@ -1,0 +1,22 @@
+<form (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="col-12 mb-3">
+      <input type="text" class="form-control" placeholder="Email" [(ngModel)]="email" name="email"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 mb-3">
+      <input type="text" class="form-control" type="password" placeholder="Heslo" [(ngModel)]="password" name="password"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="button-wrapper col-12 mb-2">
+      <button type="submit" class="btn btn-primary">Prihlásiť</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="link-wrapper col-12">
+      <a routerLink="/signup">Vytvoriť účet</a>
+    </div>
+  </div>
+</form>

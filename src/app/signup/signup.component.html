@@ -1,0 +1,163 @@
+<form (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="col-12 mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Názov klubu"
+        [(ngModel)]="clubName"
+        name="clubName"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 mb-3">
+      <select
+        class="form-control"
+        [(ngModel)]="selectedOption"
+        name="selectedOption"
+      >
+        <form (ngSubmit)="onSubmit()">
+          <div class="row">
+            <div class="col-12 mb-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Názov klubu"
+                [(ngModel)]="clubName"
+                name="clubName"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 mb-3">
+              <select
+                class="form-control"
+                [(ngModel)]="selectedOption"
+                name="selectedOption"
+              >
+                <option value="" disabled selected>Vyber ligu</option>
+                <option *ngFor="let option of dropdownOptions" [value]="option">
+                  {{ option }}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 mb-3">
+              <input
+                type="password"
+                class="form-control"
+                placeholder="Heslo"
+                [(ngModel)]="password"
+                name="password"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 mb-3">
+              <input
+                type="password"
+                class="form-control"
+                placeholder="Potvrdiť heslo"
+                [(ngModel)]="confirmPassword"
+                name="confirmPassword"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 mb-3">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Email"
+                [(ngModel)]="email"
+                name="email"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 mb-3">
+              <input
+                type="tel"
+                class="form-control"
+                placeholder="Tel. číslo"
+                [(ngModel)]="phoneNumber"
+                name="phoneNumber"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="button-wrapper col-12 mb-2">
+              <button type="submit" class="btn btn-primary">
+                Zaregistrovať
+              </button>
+            </div>
+          </div>
+        </form>
+        <option value="" disabled selected>Vyber ligu</option>
+        <option
+          *ngFor="let option of dropdownOptions"
+          aria-placeholder="Vyber ligu"
+          [value]="option"
+        >
+          {{ option }}
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 mb-3">
+      <input
+        type="password"
+        class="form-control"
+        placeholder="Heslo"
+        [(ngModel)]="password"
+        name="password"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 mb-3">
+      <input
+        type="password"
+        class="form-control"
+        placeholder="Potvrdiť heslo"
+        [(ngModel)]="confirmPassword"
+        name="confirmPassword"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 mb-3">
+      <input
+        type="email"
+        class="form-control"
+        placeholder="Email"
+        [(ngModel)]="email"
+        name="email"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 mb-3">
+      <input
+        type="tel"
+        class="form-control"
+        placeholder="Tel. číslo"
+        [(ngModel)]="phoneNumber"
+        name="phoneNumber"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <div class="button-wrapper col-12 mb-2">
+      <button type="submit" class="btn btn-primary">Zaregistrovať</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="link-wrapper col-12">
+      <a routerLink="/">Prihlásiť</a>
+    </div>
+  </div>
+</form>

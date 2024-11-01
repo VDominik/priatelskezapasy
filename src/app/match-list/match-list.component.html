@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row" *ngFor="let match of matches">
+    <div class="mb-2">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ match.name }}</h5>
+          <h5 class="card-title">{{ match.created_by }}</h5>
+          <h5 class="card-title">{{ match.league }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ match.date }}</h6>
+          <p class="card-text">{{ match.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

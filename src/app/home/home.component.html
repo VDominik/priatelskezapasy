@@ -1,0 +1,52 @@
+<app-navbar></app-navbar>
+
+<div class="row">
+    <div class="col-5 offset-1">
+        <form (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+                <label for="date">Vyberte datum:</label>
+                <input
+                type="date"
+                id="date"
+                name="date"
+                class="form-control"
+                [(ngModel)]="date"
+                />
+             </div>
+            <div class="row">
+                <div class="mb-3">
+                <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Nazov"
+                    [(ngModel)]="name"
+                    name="name"
+                />
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-3">
+                <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Popis"
+                    [(ngModel)]="description"
+                    name="description"
+                />
+                </div>
+            </div>
+            <div class="row">
+                <div class="button-wrapper mb-2">
+                <button type="submit" class="btn btn-primary">Vytvorit</button>
+                <button (click)="filterMatches()" class="btn btn-secondary">
+                    Nájsť Zápasy
+                  </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-5">
+        <match-list [matches]="filteredMatches"></match-list>
+    </div>
+
