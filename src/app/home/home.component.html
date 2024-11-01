@@ -2,7 +2,7 @@
 
 <div class="row">
     <div class="col-5 offset-1">
-        <form (ngSubmit)="onSubmit()">
+        <form>
             <div class="mb-3">
                 <label for="date">Vyberte datum:</label>
                 <input
@@ -37,7 +37,7 @@
             </div>
             <div class="row">
                 <div class="button-wrapper mb-2">
-                <button type="submit" class="btn btn-primary">Vytvorit</button>
+                <button (click)="onSubmit()" class="btn btn-primary">Vytvorit</button>
                 <button (click)="filterMatches()" class="btn btn-secondary">
                     Nájsť Zápasy
                   </button>
